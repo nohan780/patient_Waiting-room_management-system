@@ -67,3 +67,45 @@ class WRM:
         temp.next, temp.prev = temp.prev, temp.next
         temp = temp.next
       print("done! \n")
+
+chck = True
+a = WRM()
+while chck:
+  print("==Choose an option==")
+  print("1. Register Patient")
+  print("2. Serve a patient")
+  print("3. Show all patient")
+  print("4. Can doctor go home?....")
+  print("5. Cancel all appointment...")
+  print("6. Reverse the line....")
+  print("7. Exit")
+  print("************************")
+  num = int(input("Enter your choice: "))
+  if num == 1:
+    print("executing Register Patient...")
+    id = int(input("Enter ID: "))
+    name = input("Enter Name: ")
+    age = int(input("Enter Age: "))
+    blood = input("Enter blood group: ")
+    new = a.RegisterPatient(id,name,age,blood)
+  elif num == 2:
+    print("executing Serve a patient...")
+    serve = a.ServePatient()
+  elif num == 3:
+    print("executing Show all patient...")
+    show = a.ShowAllPatient()
+  elif num == 4:
+    print("executing Can doctor go home?...")
+    can = a.CanDoctorGoHome()
+  elif num == 5:
+    print("executing Cancel all appointment...")
+    cancel = a.CancelAll()
+  elif num == 6:
+    print("executing Reverse the line....")
+    r = a.ReverseTheLine()
+  elif num == 7:
+    print("Thank you for using Waiting room management system!!!")
+    print("EXITING!!!! \n")
+    break
+  else:
+    print("No such option!!! \n")
