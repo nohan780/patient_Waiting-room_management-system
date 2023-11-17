@@ -68,9 +68,6 @@ class WRM:
         temp = temp.next
       print("done! \n")
 
-
-
-
 chck = True
 a = WRM()
 while chck:
